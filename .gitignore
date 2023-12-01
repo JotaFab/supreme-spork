@@ -1,0 +1,3 @@
+src/backend/.venv
+.vscode
+src/backend/app/__pycache__

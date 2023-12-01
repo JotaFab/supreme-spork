@@ -6,13 +6,16 @@ services:
       - "8000:8000"
 
   redis:
-    image: redis:7.0.14-alpine3.18
+    image: redis/redis-stack:6.2.6-v10
     container_name: my-redis-container
     ports:
       - "6379:6379"
+      - "8001:8001"
     volumes:
-      - redis-data:/data
-    command: redis-server --appendonly yes
+      - /redis-data:/data
+    environment:
+      REDIS_ARGS: "--requirepass jota123 --save 60 1000 --appendonly yes"
+      
 
 volumes:
   redis-data:
