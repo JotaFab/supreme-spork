@@ -1,0 +1,19 @@
+services:
+  web:
+    container_name: fastapi-container
+    build: .
+    ports:
+      - "8000:8000"
+
+  redis:
+    image: redis:7.0.14-alpine3.18
+    container_name: my-redis-container
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+
+volumes:
+  redis-data:
+    driver: local
