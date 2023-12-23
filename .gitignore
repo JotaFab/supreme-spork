@@ -1,3 +1,4 @@
 src/backend/.venv
 .vscode
 src/backend/app/__pycache__
+*__*
