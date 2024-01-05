@@ -1,0 +1,18 @@
+{% for item in items %}
+
+<div class="w-44 h-64 justify-start items-start gap-6 inline-flex">
+    <div class="w-44 h-64 relative">
+        <div class="w-44 h-64 left-0 top-0 absolute opacity-5 bg-zinc-500 rounded-lg"></div>
+        <div class="w-40 left-[16px] top-[183px] absolute text-white text-base font-bold font-['Product Sans']">
+            <a href="{{ item }}" class="text-2xl font-bold mb-4">Item Details</h1>
+        </div>
+        <div class="w-40 left-[16px] top-[211px] absolute text-stone-300 text-sm font-bold font-['Product Sans']">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="item_code">
+                Item Code
+            </label>
+            <p class="border border-gray-300 rounded-md p-2">{{ data[i]["item_code"] }}</p>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
